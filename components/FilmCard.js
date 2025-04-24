@@ -8,27 +8,41 @@ export default function FilmCard({ film }) {
         <View style={styles.card}>
             <Image source={{ uri: film.image }} style={styles.image} />
 
-        <View style={styles.info}>
-            <Text style={styles.title}>{film.title ?? "Título não disponível"}</Text>
+            <View style={styles.info}>
+                <Text style={styles.title}>{film.title ?? "Título não disponível"}</Text>
 
-            <Text style={styles.subtitle}>{film.original_title ?? "Título original não disponível"}</Text>
+                <Text style={styles.subtitle}>{film.original_title ?? "Título original não disponível"}</Text>
 
-            <Text style={styles.subtitleSmall}>
-                {film.original_title_romanised ?? "Título romanizado não disponível"}
-            </Text>
+                <Text style={styles.subtitleSmall}>
+                    {film.original_title_romanised ?? "Título romanizado não disponível"}
+                </Text>
 
-            <Text style={styles.text}>
-                {film.description ?? "Descrição não disponível"}
-            </Text>
+                <Text style={styles.text}>
+                    {film.description ?? "Descrição não disponível"}
+                </Text>
 
-            <Text style={styles.text}>
-               Diretor: {film.director ?? "Diretor não disponível"} 
-            </Text>
-            <Text style={styles.text}>
-                Produtor: {film.producer ?? "Produtor não disponível"}
-            </Text>
-        </View>
+                <Text style={styles.text}>
+                    Diretor: {film.director ?? "Diretor não disponível"}
+                </Text>
 
+                <Text style={styles.text}>
+                    Produtor: {film.producer ?? "Produtor não disponível"}
+                </Text>
+
+                <Text style={styles.text}>
+                    Lançamento: {film.release_date ?? "Data de lançamento não disponível"}
+                </Text>
+
+                <Text style={styles.text}>
+                    Duração: {film.running_time ?? "Duração não disponível"} minutos
+                </Text>
+
+                <Text style={styles.text}>
+                    Nota: {film.rt_score ?? "Classificação não disponível"}
+                </Text>
+
+
+            </View>
         </View>
     )
 }
